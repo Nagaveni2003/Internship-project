@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehakunja</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background-color: #8B5A2B;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .login-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .hero {
+            background: url('Pictures/background.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 40px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }.footer-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+.footer-section div {
+    width: 30%;
+}
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Images */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+    </style></head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span>Email: info@snehakunja.org | Phone: +91 8217357242</span>
+            <button class="login-btn">Login</button>
+        </div>
+        <nav>
+            <div class="logo">
+                <img src="Pictures/logo.jpg" alt="Snehakunja Logo">
+            </div>
+            
+            <!-- Dropdown Navigation -->
+            <select id="navDropdown" onchange="navigateToPage()">
+                <option value="Index.html">Home</option>
+                
+                <optgroup label="About Us">
+                    <option value="about-snehakunja.html">About Snehakunja</option>
+                    <option value="awards-and-recognition.html">Awards And Recognition</option>
+                    <optgroup label="Organisation structure">
+                    <option value="trust-deed.html">Trust Deed</option>
+                    <option value="board-of-trustees.html">Board Of Trustees</option>
+                    <option value="advisory-committee.html">Advisory Committee</option>
+                    <option value="staff-members.html">Staff Members</option>
+                    </optgroup>
+                    <optgroup label="Policy">
+                    <option value="HR-policy.html">HR-policy</option>
+                    <option value="Finance policy.html">Finance policy</option>
+                    <option value="admin policy.html">Admin policy</option>
+                    <option value="CSR policy.html">CSR policy</option>
+                    </optgroup>
+                    <option value="infrastructure.html">Infrastructure</option>
+                </optgroup>
+        
+                <optgroup label="Programs and Projects">
+                    <optgroup label="Health & Wellbeing">
+                    <option value="healthcare-services.html">Health Care Services</option>
+                    <option value="holistic-health-through-AYUSH.html">Holistic Health through AYUSH</option></optgroup>
+                    <option value="conservation-and-livelihood-projects.html">Conservation and Livelihood Projects</option>
+                </optgroup>
+        
+                <option value="#">Resources</option>
+                <option value="gallery.html">Gallery</option>
+                <option value="#">Contact Us</option>
+                <option value="#">Get Involved</option>
+                <option value="#">Conservation Marketing</option>
+            </select>
+        </nav>
+        <script>
+            function navigateToPage() {
+                var selectMenu = document.getElementById("navDropdown");
+                var selectedValue = selectMenu.value;
+                if (selectedValue !== "#") {
+                    window.location.href = selectedValue;
+                }
+            }
+        </script>        
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Ayush Care</h2>
+            <p>HOME / Health & Wellbeing/Ayush Care</p>
+            </div>
+        </div>
+    </section>
+    <div>
+        <h1>Health care services available in Vivekananda Arogyadhama.</h1>
+        <p>AYUSH integrative medical care: (Ayurveda – yoga therapy – nature cure- health information counseling & basic health education - massage therapy-diet & exercises.)</p>
+        <ul>
+            <li>Rehabilitation Care for bedbound person.
+            </li>
+            <li>Recuperation Care to regain health.</li>
+            <li>Rejuvenation Care for health promotion & improvement of quality of life.</li>
+        </ul></div>
+        <br><div>
+        <p>Rehabilitative care to the people who have lost their body-mind strength due to chronic dis-ease, injury, surgery, metabolic illness and/or due to the impact of old age. Recuperative care to the people who are in any kind post illness status /post surgery health recovery period. Rejuvenation care to the health-conscious individuals who has reasonably good health but actively seeking an opportunity for further health promotion, body-mind stress reduction to improve the overall quality of life.</p>
+        <br>
+        <p>AYUSH integrative care can help the person to restore the physical strength, to establish the emotional stability and to improve the cognitive abilities. These therapies enhance the self-healing from within naturally, increases the easiness in the mind and lightness in the body, helps to attain and sustain peacefulness in the person along with complete pleasant-fullness in life experiences of an individual.</p><br>
+        <h2>Following AYUSH health care programs are available in Vivekananda Arogyadhama.</h2>
+        <p>These therapies can be taken as standalone treatment or as complementary therapy with other system of medicine depending upon individual health condition. These therapies are not practical to the people with any acute health emergencies or people with serious mental illness or in any infectious disease.</p>
+        <ul>
+            <li>AYUSH rehabilitative care.</li>
+            <li>AYUSH recuperative care.</li>
+            <li>AYUSH rejuvenation care.</li>
+            <li>AYUSH spine care.</li>
+            <li>AYUSH joint care.</li>
+            <li>AYUSH child care.</li>
+            <li>AYUSH elderly care.</li>
+            <li>AYUSH neuro-care & vaatavyadhi care.</li>
+            <li>AYUSH CARE for chronic pain management.
+            </li>
+            <li>Ayurveda detoxification therapy (panchakarma shodhana chikitsa)</li>
+            <li>AYUSH CARE for (BODY-MIND) chronic stress reduction.</li>
+            <li>AYUSH care for PCOS, menopausal syndrome & related disorders.</li>
+            <li>AYUSH care for the improvement of QOL (quality of life) of bedbound patient.</li>
+            <li>AYUSH preventive care to maintain good immunity, health &enhancement of quality of life.</li>
+            <li>AYUSH integrative care for the QOL improvement of non-infectious lifestyle diseases.<br>
+                (Like metabolic disorders, stroke, nervous system health, respiratory system health, different type of cancer, liver health, kidney health, five sensory organs health, hormonal imbalances, learning the conducive lifestyle modification for the management of sugar/BP/cholesterol/ anxiety & depression/ emotional health/bodyweight etc through naturally available nearly zero-expensive methods.)
+            </li>
+            <li>AYUSH integrative care for 80 types of VAATA disorders.</li>
+            <li>AYUSH integrative care for 40 types of PITTA disorders.</li>
+            <li>AYUSH integrative care for 20 types of KAPHA disorders.</li>
+        </ul>
+        <table border="border">
+            <tr>
+                <td>Type of the health problem</td>
+                <td>Estimated cost in INR</td>
+            </tr>
+            <tr>
+               <td>Mild but chronic health issue (Single system involvement or specific health issue or minimal symptoms).</td> 
+               <td>5000 - 6,000</td>
+            </tr>
+            <tr>
+                <td>Moderate chronic health problems.</td>
+                <td>10000 - 12,000</td>
+            </tr>
+            <tr>
+                <td>Serious health concern (Multiple symptoms or multiple health issues and multiple system involvement.)</td>
+                <td>20000 to 22,000</td>
+            </tr>
+            <tr>
+                <td>Preventive care</td>
+                <td>10000 - 12,000</td>
+            </tr>
+        </table>
+        <br></div>
+        <div>
+        <h2>AYUSH preventive care for good health, immunity and general well-being</h2>
+        <ul>
+            <li>Enhancing the natural defense system of our body (immunity) plays a vital role in preventing any of the illness and managing the function of vital organs. Calm, relaxed mind and detoxified body together results in obtaining a strong immunity.</li>
+            <li>Attending AYUSH therapies program in our Arogyadhama can Initiate yourself into the path that leads to Healthy Body, Stable mind, Pleasant-fullness in personality, healthy lifestyle which ultimately boost your immunity and enhance the health-related quality of life.</li>
+            <li>Our objectives are simple “to create a centre that offers a space for building natural immunity from within, rejuvenation and relaxation- where we bring health and wellbeing through a variety of natural methods and lifestyle modification by skilled healthcare professionals.</li>
+        </ul>
+        <h2>AYUSH supportive care for the management of metabolic syndrome</h2>
+        <p>Metabolic syndrome is a rapidly emerging disease related to sedentary lifestyle and faulty dietary habits. Prevalence of metabolic syndrome has increased significantly in India as well as world-wide since the last couple of decades. Metabolic syndrome is a clustering of at least three of the following five medical conditions (abdominal obesity, high blood pressure, high blood sugar, high serum triglycerides, and low serum HDL) that can lead to heart disease, diabetes, stroke and other health problems. Research indicates prolonged chronic stress can contribute to metabolic syndrome.</p>
+        <p>
+            Reduction of 10% body weight if obese through appropriate and adequate exercise, Yoga, counseling, stress relaxation and dietary changes can help prevent or reverse metabolic syndrome.
+        </p>
+        
+        <h2>AYUSH Care for general Wellbeing</h2>
+        <p>At Snehakunja Vivekananda Aarogya Dhama, our objective is to create a centre that offers a space for building natural immunity, rejuvenation and relaxation, where we bring human wellbeing through a variety of processes, appropriate food, support by skilled healthcare professionals in Ayurveda and naturopathy,Yoga therapy etc. Enhancing the natural defense system of our body (immunity) plays a vital role in preventing any of the illness and managing the function of vital organs. Calm, relaxed mind and detoxified body together results in obtaining a strong immunity. Meditation means being one with yourself, in the lap of nature, with following the natural life style. AYUSH care for immunity & general well-being is a holistic healthcare program which includes consultations by qualified healthcare professionals, multiple sessions of massage & steam therapy and/or shirodhara etc procedures, yoga, pranayama, guided-meditation and personalized counselling therapy sessions, balanced diet with rich nutrition, structured exercise and many more. Attending this therapy can initiate oneself into the path that leads to healthy body, stable mind, pleasant-fullness in personality, healthy lifestyle which ultimately boost your immunity and enhance the quality of life</p>
+        <h2>AYUSH wellness care:</h2>
+        <p>According to the world health organization (WHO), Health is defined as a state of complete physical, mental and social well-being and not merely the absence of a disease. wellness is a state of optimal health. Health and wellness are terms that are often interchangeable but wellness is a more inclusive one. Wellness is the active pursuit of activities and lifestyle choices that leads to the state of holistic health. The dimensions of wellness include Physical health, Emotional health, Intellectual health, Spiritual health, Social health, Occupational health and Environmental health. Wellness care is an act of practising evidence based healthy habits on a daily basis to attain a betterment in the quality of life. It is a continuous active process of engaging in activities that are likely to result in maintenance of physical endurance, Emotional stability, Intellectual clarity, Spirituality, Mindfulness, Social harmony, Occupational health and Environmental well-being. The core mission of Snehakunja wellness centre is to improve the quality of life of the people by becoming a social platform for healthy lifestyle practices. Its services include health screening, stress reduction programs, body weight management measures, AYUSH rejuvenation therapies, Beauty and skin care procedures, Physiotherapy and exercises, Personalized diet and nutrition education etc. Our centre offers various health programs to nourishes all the senses which includes AYUSH Massage therapy and Dhara chikitsa, yoga, meditation and other mindfulness practices, exercises, Nutrition and lifestyle consultation, Personalized healthcare programs like Face care, Spine care, Joint care, Foot care, Child care, Old age-care, Beauty care etc, also offers retail sales of nutritional supplements and vitamins, herbal beauty care products, organically grown spices, traditional food and healthy drinks preparations etc.</p>
+        <p>Emotional wellness decides the quality of each and every moment of our life .We may explore our life up to its fullest potential only if we are joyful and peaceful . wellness and recuperative care services available in the premise of vivekananda arogyadhama is a highly conducive space to attain this goal.</p>
+        <p>AYUSH procedures improve the health-related quality of life and overall productivity. Also,they enhance the self- healing within, increases the easiness and lightness in the body, helps to attain and sustain the peacefulness in mind, improves the pleasant- fullness in body and mind. wellness programs help in preventive health care and hence reduces the possible complications of lifestyle disorders.</p>
+        <h2>AYUSH recuperation care:</h2>
+        <p>We provide post paralysis general nursing care and rehabilitation care, elderly care and recuperative care for chronic non-infectious illness requiring prolonged paramedical and nursing assistance. We also provide the post operative care to economically less privileged people who has undergone major surgeries or to those who had chronic non-infectious illness requiring prolonged paramedical care for recuperation. The natural setting of the hospital a midst groves close to the Arabian sea Eco beach and serene estuary of river Sharavathi are ideal for convalescing patients. The hospital has also facilities for Panchakarma treatment as optional to restore good health. The doctors and the nursing staff are dedicated to selfless service,the ideal of the founder Dr. Kusuma Sorab.</p>
+        <h2>AYUSH elderly care:</h2>
+        <p>In the current life situation, Due to increased migration of younger population to urban areas, the family support to elderly has been deteriorating and there is an urgent need to provide the medical services to elderly people. The Vivekananda Arogyadhama has opened an assisted living facility to older people. The nursing care services given here will include attending to their day to day personal chores such as bathing and personal hygiene, physical exercises/walking, nutrition, recreational activities and above all attending to their specific health problems. The Arogyadhama will also provide AYUSH elderly care to the admitted people to lead betterment in quality of life.</p>
+        <h2>About AYUSH stress management program</h2>
+        <p>Emotional wellness decides the quality of each and every moment of our life. Emotional health an essential requirement to transform our routine general activities into a pleasant-full life experience. Emotional stability and intellectual clarity together facilitates us to move from dis-ease to Ease, Dis-order to Order.</p>
+        <h2>Five sensory organs & their soothing actions.
+        </h2>
+        <table border="border">
+            <tr>
+                <td>No</td>
+                <td></td>
+                <td>SENSE</td>
+                <td>ORGAN</td>
+                <td>SOOTHING ACTION</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>SHABDA</td>
+                <td>Sound</td>
+                <td>Ears</td>
+                <td>Melodious music</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>SPARSHA</td>
+                <td>Touch</td>
+                <td>Skin</td>
+                <td>Relaxing massage</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>ROOPA</td>
+                <td>Vision</td>
+                <td>Eyes</td>
+                <td>Light & Colour arrangement</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>RASA</td>
+                <td>Taste</td>
+                <td>Tounge</td>
+                <td>Delicious dishes</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>GANDHA</td>
+                <td>Smell</td>
+                <td>Nose</td>
+                <td>Aerobial herbal oils</td>
+            </tr>
+        </table>
+        <p>Main focus of our stress management program is to attain the emotional health as well as body-mind relaxation through massage therapy, Yoga therapy, counseling and Dhara Chikitsa.</p>
+        <h2>
+            About detoxification therapy (ayurveda panchakarma Shodhana Chikitsa)
+        </h2>
+        <p>Toxin or poison is a substance which is harmful to our life. If anything, which does not have compatibility to our system can acts as toxin to us. It can be the result of improper lifestyle or unsuitable diet or over-thinking mind or unfavorable behavior adopted or emotional sufferings like stress, anxiety, anger, sadness or physical and mental compulsions etc anything which causes unnecessary accumulate within us over the period of time and eventually leads to disease or disorder within us are called TOXINS. Anything which works against to well-being of our body, mind and energy are considered as toxin in ayurveda. Detoxification therapy are the measures to eliminate this unwanted accumulation happened within.</p><br>
+        <p>***************************************************************</p>
+        <h2>Dr Narayan Hegde BAMS. Reg No 21333.</h2>
+        <p>He is an AYUSH integrative health care (ayurveda-yoga) professional. He has studied BAMS at Government Ayurveda Medical College Mysore & Certificate Course in Panchakarma Therapy at National Ayurveda Research Institute for Panchakarma (NARIP) Kerala affiliated to CCARS of ministry of AYUSH, Certificate Course in Panchakarma Specialty Care at SDM College of Ayurveda, Hassan, Two short term certificate courses and one advance course in Soundarya ayurveda from National Institute of Ayurveda (NIA), Jaipur & Yoga Instructor Course at SVYASA yoga University Bangalore, Certificate Course in Yoga and Mental Health at department of integrative medicine in NIMHANS.</p>>
+
+            <p>He has worked as Ayurveda Physician at Community Health Foundation Arekatta, Sirsi (1+ year) & worked as Ayurveda Consultant at Russian Federation (4+years) & worked as RMO (ayurveda) at Vivekananda Memorial Hospital Saraguru (4+ years). He has in-total 16+ years of hands-on work experience in Panchakosha concept-based AYUSH holistic therapies for restoration of health, happiness and body-mind wellness care.</p><br>
+            <img src="Pictures/holistic health through .jpg" height="400px" width="400px" align="centre"></body></img>
+        </div>
+        <section class="footer-section">
+            <div>
+                <h2>Our Donor Partners</h2>
+                <ul>
+                    <li>Handpring Tech Pte Ltd</li>
+                    <li>Supraja Foundation</li>
+                    <li>SELCO - IKEA</li>
+                    <li>RRAN Network</li>
+                    <li>SSRC - CEPA</li>
+                    <li>DFM - University of Manitoba, Canada</li>
+                    <li>CCFD - Terre Solidaire, Paris</li>
+                    <li>ADB and AIIB Covid 19 Loans in India - NGO Forum ADBI, Philippines</li>
+                    <li>Heifer International</li>
+                    <li>GIZ - Germany</li>
+                    <li>Critical Ecosystem Partnership Fund</li>
+                    <li>FORD foundation New Delhi</li>
+                    <li>NABARD</li>
+                    <li>Department of Science and Technology Government of India</li>
+                    <li>Karnataka State Forest Department</li>
+                    <li>Karnataka State Agriculture Department</li>
+                    <li>Anand Chandavarkar foundation Mumbai</li>
+                    <li>Sir. Dorabji Tata Trust</li>
+                    <li>NETFISH, MPEDA</li>
+                    <li>Rain Forest Trust, USA</li>
+                    <li>Global Green Grants Fund USA</li>
+                    <li>Central Council for Research in Yoga and Naturopathy</li>
+                    <li>Cynthia Forbes Goodrich Corporation</li>
+                </ul>
+            </div>
+            <div>
+                <h2>SHGs of Snehakunja Trust</h2>
+                <ul>
+                    <li>Shri Mahaganapati Swasahaya Sangha, Shankrkeri, Haldipur</li>
+                    <li>Shri Tulasi Swasahaya Sangha, Badagani, Haldipur</li>
+                    <li>Pragathi Swasahaya Sangha, Shankrkeri, Haldipur</li>
+                    <li>Jai Ganesh Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Shri Mahaganapati Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Janani Swasahaya Sangha, Kirubail, Haldipur</li>
+                    <li>Shri Jatagsehwar Swasahaya Sangha, Kirubail, Haldipur</li>
+                    <li>Divyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Shri Vaishnavi Swasahaya Sangha, Mannagadde, Haldipur</li>
+                    <li>Shri Durgamba Swasahaya Sangha, Taribagil, Haldipur</li>
+                    <li>Shri Saraswati Swasahaya Sangha, Habbagadde, Haldipur</li>
+                    <li>Shri Manjunath Swasahaya Sangha, Gubbanni, Haldipur</li>
+                    <li>Shri Vaibhavalaxmi Swasahaya Sangha, Gubbanni, Haldipur</li>
+                    <li>Shri Yashaswini Swasahaya Sangha, Habbuchitte, Haldipur</li>
+                    <li>Shri Saraswati Swasahaya Sangha, Habbuchitte, Haldipur</li>
+                    <li>Shri Vaibhavalaxmi Swasahaya Sangha, Pallikeri, Haldipur</li>
+                    <li>Shri Dhanalaxmi Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Annadiyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Matsyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Samaradhi Swasahaya Sangha, Kalkatte, Haldipur</li>
+                    <li>Shri Durgamba Swasahaya Sangha, Kalkatte, Haldipur</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Location</h2>
+                <p>Snehakunja Kasarkod, Honnavar – 581342 Uttara Kannada, Karnataka</p>
+                <p>For Appointment: Contact Details:</p>
+                <p>Office & Administration: 8217357242</p>
+                <p>Vivekananda Arogyadhama: 7483611061</p>
+                <p>Email: snehakunjartrust@gmail.com, snehakunj@gmail.com</p>
+                <p>Website: <a href="https://www.snehakunja.org" style="color: gold;">www.snehakunja.org</a></p>
+            </div>
+        </section>
+    </body>
+    </html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehakunja</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background-color: #8B5A2B;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .login-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .hero {
+            background: url('Pictures/background.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 40px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+        .footer-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+.footer-section div {
+    width: 30%;
+}
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+        .org-structure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        background-color: #f8f8f8;
+    }
+
+    .org-container img {
+        width: 80%;
+        max-width: 700px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .trustees-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        background: #ffffff;
+    }
+
+    .trustee-card {
+        width: 80%;
+        max-width: 2000px;
+        background: #fcfcfc;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-left: 5px solid #d4a373;
+    }
+
+    .trustee-name {
+        font-size: 22px;
+        color: #d4a373;
+        margin: 0;
+    }
+
+    .trustee-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .trustee-location {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .trustee-desc {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    </style>
+    </head>
+    <body>
+        <header>
+            <div class="top-bar">
+                <span>Email: info@snehakunja.org | Phone: +91 8217357242</span>
+                <button class="login-btn">Login</button>
+            </div>
+            <nav>
+                <div class="logo">
+                    <img src="Pictures/logo.jpg" alt="Snehakunja Logo">
+                </div>
+                
+                <!-- Dropdown Navigation -->
+                <select id="navDropdown" onchange="navigateToPage()">
+                    <option value="Index.html">Home</option>
+                    
+                    <optgroup label="About Us">
+                        <option value="about-snehakunja.html">About Snehakunja</option>
+                        <option value="awards-and-recognition.html">Awards And Recognition</option>
+                        <optgroup label="Organisation structure">
+                        <option value="trust-deed.html">Trust Deed</option>
+                        <option value="board-of-trustees.html">Board Of Trustees</option>
+                        <option value="advisory-committee.html">Advisory Committee</option>
+                        <option value="staff-members.html">Staff Members</option>
+                        </optgroup>
+                        <optgroup label="Policy">
+                        <option value="HR-policy.html">HR-policy</option>
+                        <option value="Finance policy.html">Finance policy</option>
+                        <option value="admin policy.html">Admin policy</option>
+                        <option value="CSR policy.html">CSR policy</option>
+                        </optgroup>
+                        <option value="infrastructure.html">Infrastructure</option>
+                    </optgroup>
+            
+                    <optgroup label="Programs and Projects">
+                        <optgroup label="Health & Wellbeing">
+                        <option value="healthcare-services.html">Health Care Services</option>
+                        <option value="holistic-health-through-AYUSH.html">Holistic Health through AYUSH</option></optgroup>
+                        <option value="conservation-and-livelihood-projects.html">Conservation and Livelihood Projects</option>
+                    </optgroup>
+            
+                    <option value="#">Resources</option>
+                    <option value="gallery.html">Gallery</option>
+                    <option value="#">Contact Us</option>
+                    <option value="#">Get Involved</option>
+                    <option value="#">Conservation Marketing</option>
+                </select>
+            </nav>
+            <script>
+                function navigateToPage() {
+                    var selectMenu = document.getElementById("navDropdown");
+                    var selectedValue = selectMenu.value;
+                    if (selectedValue !== "#") {
+                        window.location.href = selectedValue;
+                    }
+                }
+            </script>
+            </script>        
+        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Our Trusties</h1>
+                <p>Help today because tomorrow you may be the one who
+                    needs more helping!</p>
+                    <p>HOME / Our trusties</p>
+            </div>
+        </section>
+        <section class="org-structure">
+            <div class="org-container">
+                <img src="Pictures/board of trustees.jpg" alt="Organizational Structure">
+            </div>
+        </section>
+        
+        <section class="trustees-section">
+            <div class="trustee-card">
+                <h2 class="trustee-name">Prof. Ramachandra Bhatta, PhD</h2>
+                <p class="trustee-title">President</p>
+                <p class="trustee-location">📍 Padmashree, 2-10-778/19, NODU, 5th Cross, Bejai, Mangalore</p>
+                <p class="trustee-desc">
+                    Ramachandra Bhatta holds a master’s degree in Economics from Bangalore University and Fisheries Economics from the University of Hull UK and a PhD in Economics from Mangalore University and post-doctoral fellowship from Florida International University, Miami. Prof. Bhatta served as faculty with the University of Agricultural Sciences, Dharwad (1979-88) and as Associate Professor and Professor of Fisheries Economics at College of Fisheries, Mangalore (1988-2012) and Division Chair (Scientist G) with National Center for Sustainable Coastal Management (MOEF&CC) Chennai (2013-15). He was also ICAR-Emeritus Scientist (Economics) during 2016-2018. He has made significant contributions in the fields of marine resource and aquaculture economics, water resources, coastal policy & livelihood issues and economic valuation of marine biodiversity. He has authored 8 book-chapters and 95 peer reviewed journal articles. The research and consulting experiences with various international and multilateral organizations like The World Bank, FAO, GIZ, World Fish Center is reflected in a number of (28) grant proposals implemented during the last 30 years. Prof. Bhatta joined as one of the trustees during 2008 and currently he is honorary president of Snehakunja Trust and also associated with a couple of research studies on small scale fisheries and social economy of dried fish funded by the University of Manitoba, Canada. Dr. Bhatta is also a member of the Karnataka Coastal Zone Management Authority, Department of Ecology and Environment, Government of Karnataka, Bengaluru.
+                </p>
+            </div>
+        
+            <div class="trustee-card">
+                <h2 class="trustee-name">Mr. Narasimha Hegde</h2>
+                <p class="trustee-title">Secretary</p>
+                <p class="trustee-location">📍 Manigadde, Po: Vanalli, Sirsi-581336, Uttara Kannada</p>
+                <p class="trustee-desc">
+                    Narasimha holds master’s degree and Professional Masters in ITC, Twente, the Netherlands. He has submitted his doctoral thesis to Greifswald University. He is involved in participatory ecological restoration of forest wetlands (swamps), gender responsive research on conservation and management of tropical fruit trees. Mr. Narasimha has expertise in the implementation of integrated interdisciplinary resource conservation and management projects in the Western Ghats. He was awarded with grants and fellowships by the CGIAR, CEPF, GGF, HIVOS, UNDP-GEF-SGP, Rain Forest Information centre, IDRC, NUFFIC NFP fellowship, ITC, University of Greifswald, University of Freiburg, FAO and ISG, The Netherlands. Currently he is honorary trustee (2015) and secretary since 2018.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Dr. Mahesh Pandith</h2>
+                <p class="trustee-title">Treasurer</p>
+                <p class="trustee-location">📍 ‘Samanvita’ 30602a/1, Opp. Road of SARPI centre, Bandegadde, Honnavar-581334. Uttara Kannada.</p>
+                <p class="trustee-desc">
+                    Dr. Mahesh Pandith BSAM, Aurvedic General Practitioner started his career at Idagunji Village in the year 1976-77. Dr. Pandit joined Vivekanada Aarogyadhama as deputy medical officer in 1980 and became one of the trustees in 1981. Dr. Pandith is one of the close associates of Dr. Kusuma Sorab founder trustee. He was Secretary for a couple of terms before he retired from his service as Chief Medical Officer. Currently, Dr. Pandith is one of the visiting consulting doctors of Vivekananda Arogyadhama and also treasurer of Snehakunja Trust.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Dr. M.D.Subhashchandran</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍 763/10, Sokanmakki cross, Hosa Heravatta, Kumta-581343</p>
+                <p class="trustee-desc">
+                    Dr M D Subash Chandran, Ph.D. is Consulting Scientist, Indian Institute of Science, Bangalore. Dr. Subashchandran started his career as a faculty in Dr A V B College, Kumta where he served for 32 years. He has research expertise in ecosystem assessment and biodiversity management. He was awarded the best teacher in science by the Govt of Karnataka in 2003. He was conferred with Karnataka Rajyotsava Award in 2013, by the Govt of Karnataka in 2013. He has about 326 scientific publications to his credit. He was past secretary of the Snehakunja Trust. He was Member of Karnataka Biodiversity Board for two terms. Currently he is Member of the Karnataka Coastal Zone Management Authority, Bengaluru.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Shri. K.N. Anand</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍 No.13, 3rd cross, Ground floor, Desai Garden, Vasantapura Main Road, Bangaluru South, Konanakunte, Bengaluru-560062.</p>
+                <p class="trustee-desc">
+                    K N Anand Retired Civil Engineer, Trustee of Snehakunja Trust. Mr. Anand worked with Karnataka Power Transmission Corporation for 31 years. Mr. Anand was introduced to the founder trustee late Dr. Kusuma Sorab in 1977 and was offered to join Snehakunja as a trustee. Mr. Anand struggled and worked hard to mobilize resources and construction of buildings and cottages of the Trust. He mobilized forces to withstand the local conflicts. Anand served as President, Treasurer and Trustee during his term and currently he one of the trustees who is guiding in all construction and financial estimations.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Rajarajeshwari Joshi</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍‘Kadambini’, 2nd Main, 5th Cross, Narayanpur, Dharwad-580008</p>
+                <p class="trustee-desc">
+                    Rajarajeshwari G Joshi has masters’ degree in Sanskrit and Philosophy and started her career as a faculty in Philosophy in Mumbai where she worked for eight years (1995??- ). She joined Snehakunja as administrator during 1998 and served until 2010. Ms. Joshi became one of the trustees in 2011. Ms. Joshi has vast experience of working on gender issues, women rights and livelihoods. During the last 10 years, she is associated with Jagruti, an association based in Dharwad and working on women empowerment and people rights. Rajeshwari has been personally involved in the protection of child rights in rural areas.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Mr. Shridhar Hegde</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍Allallikeri, Gunavante, Manki, Honnavar, Uttarakannada, Karnataka – 581348</p>
+                <p class="trustee-desc">
+                    Mr. Shridhar Hegde is 6th generation Yakshagana artist in the unbroken chain of traditional artists from one of the greatest Yakshagana artist family by the name 'Keremane'. Brought up in Coastal Karnataka in a strong cultural environment of art, music and literature, Shridhar Hegde was introduced to the art form in his early childhood by his grandfather Late Keremane Shambhu Hegde. He has attained rigorous training in Yakshagana for more than 10 years in Shrimaya Yakshagana Kalakendra, the Yakshagana Training centre run by the Mandali. Since then, he has been learning and performing with his Father Keremane Shivananda Hegde all over India. He has been under the guidance of Guru Dr. Maya Rao for two and half years for his Kathak training. He was also introduced to Hindustani Music at his early age by his mother which fostered his interests in rhythm and has passed the Junior Examination in Tabla. He has also been a part of organizing the annual 'Keremane Shambhu Hegde Rastriya Natyotsava' conducted by the Mandali.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Dr. Geeta S Naik</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍#587, Melinakeri, Kumta, Uttarakannada, Karnataka – 581330</p>
+                <p class="trustee-desc">
+                    Dr. Geeta Naik is a retired associate professor in Botany and done the research projects on UGC financed Research for M. Phil. on “Origin and Evolution of Raishan Millet –Digitaria cruciate var. cruciate.” of Khasi Hills and A UGC sponsored minor research project on a native variety of Paddy – “KAGGA for Comparison of its SEED PROTIEN with other varieties by SDS PAGE method. Presented paper on “Kagga –A Dwindling Salt-tolerant Native Variety of Paddy from Uttara Kannada” in National Conference held in Dept. of Botany, Karnataka Univrsity Darwad, in March 2011. Participated in the State Level, Childrens’ Science Congress held in Mysore (April 2010) and Gulburga (2011) as a member in the panel of juries. Coordinated for the preparation of “Peoples Biodiversity Register” (PBR) for few Gram Panchayats of Taluk Kumta. Given many radio talks and participated in several radio panel discussions on matters of Science, Environment and other social issues related with women welfare. Doner member in Karnataka Rajya Vijnana Parishat, Member in Red Cross Society, Kumta, Member in Jilla Vijnana Kendra Karwar, Worked briefly with an NGO “Khushi Parisara” , concerned with Environmental awareness.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Mr. Anand Hegde</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍Po. Bisalkoppa, Sirsi (U.K), Karnataka 581358</p>
+                <p class="trustee-desc">
+                    Mr. Anand Hegde is the research consultant and trustee of the Snehakunja Trust. He has a master’s degree in business administration-Marketing, Mysore University. He was Marketing Executive for Cadilla Pharmaceuticals for agro division for Establish operation strategy in a team for improving procurement and fare trade & Coordinating procurement persons and farmers for better result. Project coordinator in Mangrove conservation and Restoration project - “Participatory Restoration of Mangroves in the West coasts of India and carbon crediting”. This is a mangrove restoration project to grow mangrove plantations in Government and private lands in support of carbon revenue and linking landowners with carbon revenue, community development programs which is running in coastal Karnataka along with Mangrove restoration project. Support for Bee Keeping, Dry fish techniques, and other local resource value addition technologies to promote local community to get their livelihood.
+                </p>
+            </div>
+            <div class="trustee-card">
+                <h2 class="trustee-name">Dr. Prakash Mesta, Ph.D</h2>
+                <p class="trustee-title">Trustee</p>
+                <p class="trustee-location">📍# 369, Yesubandr, Kelaginapalya, Honnavar, Uttarakannada, Karnataka - 581342</p>
+                <p class="trustee-desc">
+                    Dr. Prakash Mesta has the Ph.D in Marine Biology, Master’s in Marine Biology and the member of Karnataka State Biodiversity Board(KBB). He is one of the research consultants of the Snehakunja Trust. He worked as Research Associate in Plymouth University Project on Fresh water Crab, Research Associate in Centre for Ecological Sciences Field Station Kumta, Indian Institute of Science-Bangalore. And worked in INCOIS Projects Karwar, Dept. of Marine Biology, KUPG Center, Karwar, NRDMS District Center Uttara Kannada District.
+                </p>
+            </div>
+        </section>
+        <section class="footer-section">
+            <div>
+                <h2>Our Donor Partners</h2>
+                <ul>
+                    <li>Handpring Tech Pte Ltd</li>
+                    <li>Supraja Foundation</li>
+                    <li>SELCO - IKEA</li>
+                    <li>RRAN Network</li>
+                    <li>SSRC - CEPA</li>
+                    <li>DFM - University of Manitoba, Canada</li>
+                    <li>CCFD - Terre Solidaire, Paris</li>
+                    <li>ADB and AIIB Covid 19 Loans in India - NGO Forum ADBI, Philippines</li>
+                    <li>Heifer International</li>
+                    <li>GIZ - Germany</li>
+                    <li>Critical Ecosystem Partnership Fund</li>
+                    <li>FORD foundation New Delhi</li>
+                    <li>NABARD</li>
+                    <li>Department of Science and Technology Government of India</li>
+                    <li>Karnataka State Forest Department</li>
+                    <li>Karnataka State Agriculture Department</li>
+                    <li>Anand Chandavarkar foundation Mumbai</li>
+                    <li>Sir. Dorabji Tata Trust</li>
+                    <li>NETFISH, MPEDA</li>
+                    <li>Rain Forest Trust, USA</li>
+                    <li>Global Green Grants Fund USA</li>
+                    <li>Central Council for Research in Yoga and Naturopathy</li>
+                    <li>Cynthia Forbes Goodrich Corporation</li>
+                </ul>
+            </div>
+            <div>
+                <h2>SHGs of Snehakunja Trust</h2>
+                <ul>
+                    <li>Shri Mahaganapati Swasahaya Sangha, Shankrkeri, Haldipur</li>
+                    <li>Shri Tulasi Swasahaya Sangha, Badagani, Haldipur</li>
+                    <li>Pragathi Swasahaya Sangha, Shankrkeri, Haldipur</li>
+                    <li>Jai Ganesh Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Shri Mahaganapati Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Janani Swasahaya Sangha, Kirubail, Haldipur</li>
+                    <li>Shri Jatagsehwar Swasahaya Sangha, Kirubail, Haldipur</li>
+                    <li>Divyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Shri Vaishnavi Swasahaya Sangha, Mannagadde, Haldipur</li>
+                    <li>Shri Durgamba Swasahaya Sangha, Taribagil, Haldipur</li>
+                    <li>Shri Saraswati Swasahaya Sangha, Habbagadde, Haldipur</li>
+                    <li>Shri Manjunath Swasahaya Sangha, Gubbanni, Haldipur</li>
+                    <li>Shri Vaibhavalaxmi Swasahaya Sangha, Gubbanni, Haldipur</li>
+                    <li>Shri Yashaswini Swasahaya Sangha, Habbuchitte, Haldipur</li>
+                    <li>Shri Saraswati Swasahaya Sangha, Habbuchitte, Haldipur</li>
+                    <li>Shri Vaibhavalaxmi Swasahaya Sangha, Pallikeri, Haldipur</li>
+                    <li>Shri Dhanalaxmi Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Annadiyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Matsyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+                    <li>Samaradhi Swasahaya Sangha, Kalkatte, Haldipur</li>
+                    <li>Shri Durgamba Swasahaya Sangha, Kalkatte, Haldipur</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Location</h2>
+                <p>Snehakunja Kasarkod, Honnavar – 581342 Uttara Kannada, Karnataka</p>
+                <p>For Appointment: Contact Details:</p>
+                <p>Office & Administration: 8217357242</p>
+                <p>Vivekananda Arogyadhama: 7483611061</p>
+                <p>Email: snehakunjartrust@gmail.com, snehakunj@gmail.com</p>
+                <p>Website: <a href="https://www.snehakunja.org" style="color: gold;">www.snehakunja.org</a></p>
+            </div>
+        </section>
+    </body>
+    </html>

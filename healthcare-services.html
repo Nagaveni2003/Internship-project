@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehakunja</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background-color: #8B5A2B;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .login-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .hero {
+            background: url('Pictures/background.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 40px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }.footer-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+.footer-section div {
+    width: 30%;
+}
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+.trust-deed-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        background-color: #f5f5f5; /* Light gray background */
+    }
+    
+        .charges-chart {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .charges-chart h2, .charges-chart h3 {
+            text-align: center;
+            color: #8B5A2B;
+        }
+        .charges-chart table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+        .charges-chart table, .charges-chart th, .charges-chart td {
+            border: 1px solid #ddd;
+        }
+        .charges-chart th, .charges-chart td {
+            padding: 10px;
+            text-align: center;
+        }
+        .charges-chart th {
+            background-color: #8B5A2B;
+            color: white;
+        }
+    
+
+    
+
+    </style></head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span>Email: info@snehakunja.org | Phone: +91 8217357242</span>
+            <button class="login-btn">Login</button>
+        </div>
+        <nav>
+            <div class="logo">
+                <img src="Pictures/logo.jpg" alt="Snehakunja Logo">
+            </div>
+            
+            <!-- Dropdown Navigation -->
+            <select id="navDropdown" onchange="navigateToPage()">
+                <option value="Index.html">Home</option>
+                
+                <optgroup label="About Us">
+                    <option value="about-snehakunja.html">About Snehakunja</option>
+                    <option value="awards-and-recognition.html">Awards And Recognition</option>
+                    <optgroup label="Organisation structure">
+                    <option value="trust-deed.html">Trust Deed</option>
+                    <option value="board-of-trustees.html">Board Of Trustees</option>
+                    <option value="advisory-committee.html">Advisory Committee</option>
+                    <option value="staff-members.html">Staff Members</option>
+                    </optgroup>
+                    <optgroup label="Policy">
+                    <option value="HR-policy.html">HR-policy</option>
+                    <option value="Finance policy.html">Finance policy</option>
+                    <option value="admin policy.html">Admin policy</option>
+                    <option value="CSR policy.html">CSR policy</option>
+                    </optgroup>
+                    <option value="infrastructure.html">Infrastructure</option>
+                </optgroup>
+        
+                <optgroup label="Programs and Projects">
+                    <optgroup label="Health & Wellbeing">
+                    <option value="healthcare-services.html">Health Care Services</option>
+                    <option value="holistic-health-through-AYUSH.html">Holistic Health through AYUSH</option></optgroup>
+                    <option value="conservation-and-livelihood-projects.html">Conservation and Livelihood Projects</option>
+                </optgroup>
+        
+                <option value="#">Resources</option>
+                <option value="gallery.html">Gallery</option>
+                <option value="#">Contact Us</option>
+                <option value="#">Get Involved</option>
+                <option value="#">Conservation Marketing</option>
+            </select>
+        </nav>
+        <script>
+            function navigateToPage() {
+                var selectMenu = document.getElementById("navDropdown");
+                var selectedValue = selectMenu.value;
+                if (selectedValue !== "#") {
+                    window.location.href = selectedValue;
+                }
+            }
+        </script>        
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Health Care Services</h2>
+            <p>HOME / Health & Wellbeing/Health Care Services</p>
+            </div>
+        </div>
+    </section>
+    <section class="charges-chart">
+        <h2>Health Care Servics</h2>
+<div>
+ <br>
+ <center><h1><p>CHARGES CHART FOR VIVEKANANDA AROGYADHAMA SERVICES</p></h2></center>
+ <center><h3><p>Service charges for OP medical procedures. (Since February 2022)</p></h3></center>
+ <table border>
+ <td>Duration of AYUSH medical procedures                      </td>
+  <td>Service charges for AYUSH medical procedure               </td>
+   <tr>
+    <td>10-12 minutes</td>
+    <td>100=00</td>
+   
+  </tr>
+  <tr>
+    <td>25-30 minutes</td>
+    <td>250=00</td>
+   
+  </tr>
+  <tr>
+    <td>45-50 minutes</td>
+    <td>450=00</td>
+   
+  </tr>
+  <tr>
+    <td>60 minutes</td>
+    <td>500=00</td>
+   
+  </tr>
+  </table>
+  <center><h1><p>Procedures Available:</p></h2></center>
+  <table border>
+ <td>100=00                    </td>
+  <td>250=00             </td>
+    <td>=450=00</td>
+    <td>50=00</td>
+ <tr>
+ <td>Yearly OP registration</td>
+ <td>Home visit charge</td>
+ <td>Abhyanga massage therapy</td>
+ <td>Blood sugar test</td>
+ </tr>
+ <tr>
+ <td>Routine OP Consultation</td>
+ <td>Local massage therapy</td>
+ <td>Dhara chikitsa</td>
+ <td>Oushadha kalpa/svaras/ Kashaya paana preparation</td>
+ </tr>
+ <tr>
+ <td>Information counseling</td>
+ <td>Enema</td>
+ <td>Vamana</td>
+ <td>OP for Injection from outside</td>
+ </tr>
+ <tr>
+ <td>Local steam therapy</td>
+ <td>Full-body steam therapy</td>
+ <td>Virechana</td>
+ <td>Minor First aid care</td>
+ </tr>
+ <tr>
+ <td>Minor bandage</td>
+ <td>Anuvasana Basti</td>
+ <td>Kashaya basti</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Lepana</td>
+ <td>Nasya</td>
+ <td>Takradhara/Ksheeradhara</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Stanika parisheka</td>
+ <td>Catheterization</td>
+ <td>Taila dhara/Kashaya dhara</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Shirolepa</td>
+ <td>RT Feeding tube insertion</td>
+ <td>Herbal powder massage</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Jalaneti/Sutraneti</td>
+ <td>Bladder wash</td>
+ <td>Patra panda sveda</td>
+ <td> 20=00</td>
+ </tr>
+ <tr>
+ <td>IV injection service charges</td>
+ <td>Kashaya Basti preparation</td>
+ <td>Churna pinda sveda</td>
+ <td>OP for BP checkup. </td>
+ </tr>
+ <tr>
+ <td>Nebulization Charges.</td>
+ <td>Shastikashali preparation</td>
+ <td>Shastikashali pindasveda</td>
+ <td>OP for only Medicine purchase </td>
+ </tr>
+ <tr>
+ <td>herbal Steam Inhalation</td>
+ <td>Minor OT Preparation charge</td>
+ <td>Kati basti/greeva basti/jaanubasti
+Any stanika basti</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Wound care (small size)</td>
+ <td>Wound care (medium size)	</td>
+ <td>Wound care (Large size)Exercise & physical therapy (basic)</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Exercise & physical therapy (basic)</td>
+ <td>Physiotherapy & exercise (moderate)</td>
+ <td>Physiotherapy and exercise (Intensive care)</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Any simple (10-15 min) AYUSH integrative care services.</td>
+ <td>Any 20-30 min long AYUSH integrative care services</td>
+ <td>Any 40-50 min long AYUSH integrative care services</td>
+ <td> </td>
+ </tr>
+ <tr>
+ <td>Any On –request service charges (ex: blood test, material/ medicine supply from honavar for individual patient).</td>
+ <td>IP registration charges</td>
+ <td>Specialist visiting charge (Depending on availability)</td>
+ <td> </td>
+ </tr>
+ </table></div>
+ <div>
+ <center><h1><p>In-patient care expenses details: (in 2022)</p></h2></center>
+ <li>One-time new inpatient registration charges 450=00 total.</li>
+ <li>Charges for in-patient care 910=00 /day.
+ <blockquote>*{pharmacy charges (medicine/ material purchase -if any) & service charges for any additional health care procedures (if any) are extra depending on individual requirement}.</li></blockquote>
+  <table border>
+  <td> </td>
+ <td>General                    </td>
+  <td>Semi special            </td>
+    <td>Special Room No 1,2,3,4</td>
+    <td>Day care</td>
+	<td>Patient with special needs & Night frequent calls</td>
+	<tr>
+	<td>Bed charge</td>
+	<td>250=00 </td>
+	<td>450=00 </td>
+	<td>650=00 </td>
+	<td>300=00 </td>
+	<td>450=00 </td>
+	</tr>
+		<tr>
+	<td>Nursing care</td>
+	<td>250=00 </td>
+	<td>250=00 </td>
+	<td>250=00 </td>
+	<td>125=00 </td>
+	<td>450=00 </td>
+	</tr>
+		<tr>
+	<td>Hospital professional	</td>
+	<td>250=00 </td>
+	<td>250=00 </td>
+	<td>250=00 </td>
+	<td>125=00 </td>
+	<td>450=00 </td>
+	</tr>
+	<tr>
+	<td>Food</td>
+	<td>160=00 </td>
+	<td>160=00 </td>
+	<td>160=00 </td>
+	<td>50=00 </td>
+	<td>160=00 </td>
+	</tr>
+	<tr><b>
+	<td>Total</td></b>
+	<td>910=00 </td>
+	<td>1110=00 </td>
+	<td>1310=00 </td>
+	<td>600=00 </td>
+	<td>1510=00 </td></b>
+	</tr>
+	</table></div>
+	<div>
+	<center><p>(Medicine cost/material cost/ service charges for any health care procedures are extra depending on individual requirement).</p></center></div>
+</section>
+<section class="footer-section">
+    <div>
+        <h2>Our Donor Partners</h2>
+        <ul>
+            <li>Handpring Tech Pte Ltd</li>
+            <li>Supraja Foundation</li>
+            <li>SELCO - IKEA</li>
+            <li>RRAN Network</li>
+            <li>SSRC - CEPA</li>
+            <li>DFM - University of Manitoba, Canada</li>
+            <li>CCFD - Terre Solidaire, Paris</li>
+            <li>ADB and AIIB Covid 19 Loans in India - NGO Forum ADBI, Philippines</li>
+            <li>Heifer International</li>
+            <li>GIZ - Germany</li>
+            <li>Critical Ecosystem Partnership Fund</li>
+            <li>FORD foundation New Delhi</li>
+            <li>NABARD</li>
+            <li>Department of Science and Technology Government of India</li>
+            <li>Karnataka State Forest Department</li>
+            <li>Karnataka State Agriculture Department</li>
+            <li>Anand Chandavarkar foundation Mumbai</li>
+            <li>Sir. Dorabji Tata Trust</li>
+            <li>NETFISH, MPEDA</li>
+            <li>Rain Forest Trust, USA</li>
+            <li>Global Green Grants Fund USA</li>
+            <li>Central Council for Research in Yoga and Naturopathy</li>
+            <li>Cynthia Forbes Goodrich Corporation</li>
+        </ul>
+    </div>
+    <div>
+        <h2>SHGs of Snehakunja Trust</h2>
+        <ul>
+            <li>Shri Mahaganapati Swasahaya Sangha, Shankrkeri, Haldipur</li>
+            <li>Shri Tulasi Swasahaya Sangha, Badagani, Haldipur</li>
+            <li>Pragathi Swasahaya Sangha, Shankrkeri, Haldipur</li>
+            <li>Jai Ganesh Swasahaya Sangha, Horbag, Haldipur</li>
+            <li>Shri Mahaganapati Swasahaya Sangha, Horbag, Haldipur</li>
+            <li>Janani Swasahaya Sangha, Kirubail, Haldipur</li>
+            <li>Shri Jatagsehwar Swasahaya Sangha, Kirubail, Haldipur</li>
+            <li>Divyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+            <li>Shri Vaishnavi Swasahaya Sangha, Mannagadde, Haldipur</li>
+            <li>Shri Durgamba Swasahaya Sangha, Taribagil, Haldipur</li>
+            <li>Shri Saraswati Swasahaya Sangha, Habbagadde, Haldipur</li>
+            <li>Shri Manjunath Swasahaya Sangha, Gubbanni, Haldipur</li>
+            <li>Shri Vaibhavalaxmi Swasahaya Sangha, Gubbanni, Haldipur</li>
+            <li>Shri Yashaswini Swasahaya Sangha, Habbuchitte, Haldipur</li>
+            <li>Shri Saraswati Swasahaya Sangha, Habbuchitte, Haldipur</li>
+            <li>Shri Vaibhavalaxmi Swasahaya Sangha, Pallikeri, Haldipur</li>
+            <li>Shri Dhanalaxmi Swasahaya Sangha, Horbag, Haldipur</li>
+            <li>Annadiyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+            <li>Matsyajyoti Swasahaya Sangha, Horbag, Haldipur</li>
+            <li>Samaradhi Swasahaya Sangha, Kalkatte, Haldipur</li>
+            <li>Shri Durgamba Swasahaya Sangha, Kalkatte, Haldipur</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Location</h2>
+        <p>Snehakunja Kasarkod, Honnavar – 581342 Uttara Kannada, Karnataka</p>
+        <p>For Appointment: Contact Details:</p>
+        <p>Office & Administration: 8217357242</p>
+        <p>Vivekananda Arogyadhama: 7483611061</p>
+        <p>Email: snehakunjartrust@gmail.com, snehakunj@gmail.com</p>
+        <p>Website: <a href="https://www.snehakunja.org" style="color: gold;">www.snehakunja.org</a></p>
+    </div>
+</section>
+</body>
+</html>
+    
+    
+    
